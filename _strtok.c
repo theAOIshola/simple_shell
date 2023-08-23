@@ -28,6 +28,7 @@ char **_strtok(char *str, char *delim)
 	while (token != NULL)
 	{
 		tokenArr[i] = malloc(_strlen(token) + 1);
+		if (tokenArr[i] == NULL)
 		{
 			free_dp(tokenArr);
 			return (NULL);
@@ -37,7 +38,7 @@ char **_strtok(char *str, char *delim)
 		token = strtok(NULL, delim);
 		i++;
 	}
-	tokenArr[i] = NULL;
+	tokenArr[i] = token;
 
 	return (tokenArr);
 }
