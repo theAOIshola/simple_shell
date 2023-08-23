@@ -27,7 +27,7 @@ int _atoi(char *s)
 	return (integer);
 }
 
-int main()
+int main(void)
 {
 	int value;
 
