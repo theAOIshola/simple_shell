@@ -31,5 +31,13 @@ void exit_shell(char **cmd);
 void print_prompt(void);
 void signal_handler(int signal);
 void check_EOF(char *buf);
+<<<<<<< HEAD
 
+=======
+int _strlen(char *s);
+char _strcat(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+void free_exit(char **cmd);
+void free_dp(char **cmd);
+>>>>>>> Henshaw
 #endif

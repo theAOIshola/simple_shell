@@ -12,11 +12,11 @@ void exit_shell(char **cmd)
 
 	if (cmd[1] == NULL)
 	{
-		/*FREE(cmd)*/
+		free_dp(cmd);
 		exit(EXIT_SUCCESS);
 	}
 
 	mode = _atoi(cmd[1]);
-	/*FREE(cmd)*/
+	free_dp(cmd);
 	exit(mode);
 }
