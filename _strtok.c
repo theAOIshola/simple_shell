@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "shell.h"
 
 /**
  * _strtok - tokenize a string
@@ -21,7 +22,7 @@ char **_strtok(char *str, char *delim)
 		return (NULL);
 	}
 
-	tokenArr = malloc(sizeof(char *));
+	tokenArr = malloc(sizeof(char *) * (_strlen(str) + 1));
 	if (tokenArr == NULL)
 		return (NULL);
 
@@ -29,21 +30,17 @@ char **_strtok(char *str, char *delim)
 
 	while (token != NULL)
 	{
-		char **temp = realloc(tokenArr, (i + 2) * sizeof(char *));
-
-		if (!temp)
+		tokenArr[i] = malloc(_strlen(token) + 1);
 		{
-			free(tokenArr);
+			free_dp(tokenArr);
 			return (NULL);
 		}
 
-		tokenArr = temp;
-		tokenArr[i] = token;
-		tokenArr[i + 1] = NULL;
-
+		_strcpy(tokenArr[i], token);
 		token = strtok(NULL, delim);
 		i++;
 	}
+	tokenArr[i] = NULL;
 
 	return (tokenArr);
 }
