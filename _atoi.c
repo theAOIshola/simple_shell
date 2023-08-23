@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * _atoi - convert alphabets to integers
+ * @s: the string to convert to integer
+ * Return: integer converted integer
+ */
+
 int _atoi(char *s)
 {
 	int integer = 0;

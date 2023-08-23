@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * main - main function that runs the shell
+ * @argc: argument count
+ * @argv: NULL terminated array of arguments
+ * @env: NULL terminated array of environment variables
+ * Return: -1 on failure
+ */
 int main(int argc, char **argv, char **env)
 {
 	char *buf = NULL, **cmd = NULL;

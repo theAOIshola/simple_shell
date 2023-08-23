@@ -14,6 +14,9 @@
 char **_strtok(char *str, char *delim);
 
 int _atoi(char *s);
+int _strlen(char *s);
+char _strcat(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
 
 void get_child_process(char **cmd, char *name, chr **env, int cyc);
 int change_directory(char *path);
@@ -28,9 +31,6 @@ void exit_shell(char **cmd);
 void print_prompt(void);
 void signal_handler(int signal);
 void check_EOF(char *buf);
-int _strlen(char *s);
-char _strcat(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
 void free_exit(char **cmd);
 void free_dp(char **cmd);
 #endif
