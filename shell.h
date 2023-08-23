@@ -29,7 +29,7 @@ void print_prompt(void);
 void signal_handler(int signal);
 void check_EOF(char *buf);
 int _strlen(char *s);
-char *_strcat(char *dest, char *src);
+char _strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 
 #endif
