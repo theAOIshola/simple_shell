@@ -15,7 +15,7 @@ char **getPath(char **env)
 	var = strtok(env[i], "=");
 	while (env[i] != NULL)
 	{
-		if (_strcmp(var, "PATH"));
+		if (_strcmp(var, "PATH"))
 		{
 			var = strtok(NULL, "\n");
 			path = _strtok(var, ":");
@@ -75,7 +75,7 @@ void print_env(char **env)
 
 void exec_cmd(char **cmd, char *name, char **env, int cyc)
 {
-	char **path = NULL, **full_path = NULL;
+	char **path = NULL, *full_path = NULL;
 	struct stat status;
 	unsigned int i = 0;
 
@@ -86,7 +86,7 @@ void exec_cmd(char **cmd, char *name, char **env, int cyc)
 		if (execve(cmd[0], cmd, env) == -1)
 		{
 			perror(name);
-			/*FREE_EXIT(cmd)*/
+			free_exit(cmd);
 		}
 	}
 	else
@@ -101,13 +101,13 @@ void exec_cmd(char **cmd, char *name, char **env, int cyc)
 				if (execve(full_path, cmd, env) == -1)
 				{
 					perror(name);
-					/*FREE(cmd)*/
-					/*FREE_EXIT(cmd)*/
+					free_dp(path);
+					free_exit(cmd);
 				}
 				return;
 			}
 		}
 		error_message(name, cyc, cmd[0]);
-		/*FREE(path)*/
+		free_dp(path);
 	}
 }
