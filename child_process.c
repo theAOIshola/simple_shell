@@ -1,7 +1,6 @@
 #include "shell.h"
 
 /**
-<<<<<<< HEAD
  * get_child_process - create a child process that executes
  * a command in shell
  * @cmd: command inputed into shell
@@ -9,16 +8,8 @@
  * @env: array of environment variables
  * @cyc: number of cycles run
  * Return: Nothing.
-=======
- * get_child_process - function that handles sub (child) processes
- * @cmd: pointer to command that will be tokenized
- * @name: pointer to the name of the shell
- * @env: pointer to the enviroment variables
- * @cyc: executed cycles count
- *
- * Return: Nothing
->>>>>>> Henshaw
  */
+
 void get_child_process(char **cmd, char *name, char **env, int cyc)
 {
 	int pid, exit_status, wait_status;
@@ -45,15 +36,9 @@ void get_child_process(char **cmd, char *name, char **env, int cyc)
 }
 
 /**
-<<<<<<< HEAD
  * change_directory - change the directory of the process
  * @path: new path to change to
  * Return: 1 on Success, 98 on error.
-=======
- * change_directory - function that changes the working directory
- * @path: the new current working dir
- * Return: 0 on success otherwise -1 is returned.
->>>>>>> Henshaw
  */
 
 int change_directory(char *path)

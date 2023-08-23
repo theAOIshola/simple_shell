@@ -32,8 +32,6 @@ int _atoi(char *s)
 		integer = (-1 * integer);
 	return (integer);
 }
-<<<<<<< HEAD
-=======
 
 int main(void)
 {
@@ -44,4 +42,3 @@ int main(void)
 
 	return (0);
 }
->>>>>>> Henshaw
