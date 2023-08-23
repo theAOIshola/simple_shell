@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "shell.h"
 
 /**
  * _strtok - tokenize a string
