@@ -2,7 +2,7 @@
 
 /**
  * exit_shell - exits the shell
- * @cmd - pointer to command
+ * @cmd: pointer to command
  * Return: Nothing
  */
 

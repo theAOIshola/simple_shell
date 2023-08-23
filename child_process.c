@@ -1,8 +1,13 @@
 #include "shell.h"
 
 /**
- * get_child_process
- *
+ * get_child_process - create a child process that executes
+ * a command in shell
+ * @cmd: command inputed into shell
+ * @name: name of the shell
+ * @env: array of environment variables
+ * @cyc: number of cycles run
+ * Return: Nothing.
  */
 
 void get_child_process(char **cmd, char *name, char **env, int cyc)
@@ -31,9 +36,9 @@ void get_child_process(char **cmd, char *name, char **env, int cyc)
 }
 
 /**
- * change_directory -
- * @path:
- * Return:
+ * change_directory - change the directory of the process
+ * @path: new path to change to
+ * Return: 1 on Success, 98 on error.
  */
 
 int change_directory(char *path)

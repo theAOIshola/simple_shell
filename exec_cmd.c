@@ -15,7 +15,7 @@ char **getPath(char **env)
 	var = strtok(env[i], "=");
 	while (env[i] != NULL)
 	{
-		if (_strcmp(var, "PATH"));
+		if (_strcmp(var, "PATH"))
 		{
 			var = strtok(NULL, "\n");
 			path = _strtok(var, ":");
@@ -28,8 +28,12 @@ char **getPath(char **env)
 }
 
 /**
- * error_message(char *name, int cyc, char **cmd)
- *
+ * error_message - write error message to screen for wrong
+ * commands
+ * @name: name of shell
+ * @cyc: number of cycles run in shell
+ * @first_cmd: command name
+ * Return: Nothing.
  */
 
 void error_message(char *name, int cyc, char *first_cmd)
@@ -39,7 +43,7 @@ void error_message(char *name, int cyc, char *first_cmd)
 	m = cyc + '0';
 	write(STDOUT_FILENO, name, _strlen(name));
 	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, &c, 1);
+	write(STDOUT_FILENO, &m, 1);
 	write(STDOUT_FILENO, ": ", 2);
 	write(STDOUT_FILENO, first_cmd, _strlen(first_cmd));
 	write(STDOUT_FILENO, ": not found\n", 12);
