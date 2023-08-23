@@ -1,8 +1,15 @@
 #include "shell.h"
 
+/**
+ * main - main function that runs the shell
+ * @argc: argument count
+ * @argv: NULL terminated array of arguments
+ * @env: NULL terminated array of environment variables
+ * Return: -1 on failure
+ */
 int main(int argc, char **argv, char **env)
 {
-	char *buf = NULL; **cmd = NULL;
+	char *buf = NULL, **cmd = NULL;
 	size_t buf_size = 0;
 	ssize_t chars = 0;
 	int cyc = 0;
@@ -23,7 +30,7 @@ int main(int argc, char **argv, char **env)
 			buf[_strlen(buf) - 1] = '\0';
 			cmd = _strtok(buf, " \0");
 			free(buf);
-			if (_strcmp(cmd[0] , "exit") != 0)
+			if (_strcmp(cmd[0], "exit") != 0)
 				exit_shell(cmd);
 			else if (_strcmp(cmd[0], "cd") != 0)
 				change_directory(cmd[1]);
