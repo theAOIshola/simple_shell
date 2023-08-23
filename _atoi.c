@@ -32,13 +32,3 @@ int _atoi(char *s)
 		integer = (-1 * integer);
 	return (integer);
 }
-
-int main(void)
-{
-	int value;
-
-	value = _atoi("123a");
-	printf("%d", value);
-
-	return (0);
-}

@@ -22,7 +22,7 @@ int main(int argc, char **argv, char **env)
 		print_prompt();
 		chars = getline(&buf, &buf_size, stdin);
 		if (chars == EOF)
-			chec_EOF(buf);
+			check_EOF(buf);
 		else if (*buf == '\n')
 			free(buf);
 		else
@@ -35,7 +35,7 @@ int main(int argc, char **argv, char **env)
 			else if (_strcmp(cmd[0], "cd") != 0)
 				change_directory(cmd[1]);
 			else
-				get_child_process(cmd, av[0], env, cyc);
+				get_child_process(cmd, argv[0], env, cyc);
 		}
 		fflush(stdin);
 		buf = NULL, buf_size = 0;
