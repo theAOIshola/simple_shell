@@ -23,7 +23,7 @@ void get_child_process(char **cmd, char *name, char **env, int cyc)
 	}
 	else if (pid == 0)
 	{
-		execve(cmd[0], name, env, cyc);
+		exec_cmd(cmd, name, env, cyc);
 		free_dp(cmd);
 	}
 	else
