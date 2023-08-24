@@ -27,7 +27,6 @@ char **_strtok(char *str, char *delim)
 
 	while (token != NULL)
 	{
-		printf("%s\n", token);
 		tokenArr[i] = malloc(_strlen(token) + 1);
 		if (tokenArr[i] == NULL)
 		{
